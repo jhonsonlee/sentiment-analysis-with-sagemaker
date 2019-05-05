@@ -1,5 +1,4 @@
 import torch.nn as nn
-import torch
 
 class LSTMClassifier(nn.Module):
     """
@@ -42,11 +41,7 @@ class LSTMClassifier(nn.Module):
         weight = next(self.parameters()).data
         
         # initialize hidden state with zero weights, and move to GPU if available
-        if (torch.cuda.is_available()):
-            hidden = (weight.new(self.n_layers,batch_size,self.hidden_dim).zero_().cuda(),
-                      weight.new(self.n_layers,batch_size,self.hidden_dim).zero_().cuda())
-        else:
-            hidden = (weight.new(self.n_layers,batch_size,self.hidden_dim).zero_(),
-                      weight.new(self.n_layers,batch_size,self.hidden_dim).zero_())
+        hidden = (weight.new(self.n_layers,batch_size,self.hidden_dim).zero_(),
+                  weight.new(self.n_layers,batch_size,self.hidden_dim).zero_())
         
         return hidden
