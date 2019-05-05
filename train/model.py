@@ -30,18 +30,3 @@ class LSTMClassifier(nn.Module):
         out = self.dense(lstm_out)
         out = out[lengths - 1, range(len(lengths))]
         return self.sig(out.squeeze())
-    
-    def init_hidden(self, batch_size):
-        '''
-        Initialize the hidden state of an LSTM/GRU
-        :param batch_size: The batch_size of the hidden state
-        :return: hidden state of dims (n_layers, batch_size, hidden_dim)
-        '''
-        # Implement function
-        weight = next(self.parameters()).data
-        
-        # initialize hidden state with zero weights, and move to GPU if available
-        hidden = (weight.new(self.n_layers,batch_size,self.hidden_dim).zero_(),
-                  weight.new(self.n_layers,batch_size,self.hidden_dim).zero_())
-        
-        return hidden
