@@ -89,9 +89,12 @@ def predict_fn(input_data, model):
     #       be a numpy array which contains a single integer which is either 1 or 0
     
     # Perform inference using the model
-    prediction = model(data)
+    prediction = model.forward(data)
 
-    # Serialize the output
-    result = np.array(prediction)
+    # Move the prediction to the CPU
+    prediction = prediction.cpu()
+    
+    # Process the prediction and saved into result
+    result = np.round(prediction.numpy())
 
     return result
