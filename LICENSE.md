@@ -1,4 +1,4 @@
-Project License
+MIT License
 
 This project was submitted by Jhonson Lee for the Udacity Deep Learning Nanodegree Program.
 
