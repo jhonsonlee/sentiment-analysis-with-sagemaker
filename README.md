@@ -28,7 +28,7 @@ After you have finished, close the terminal window.
 
 The project needs two computing instaces: `ml.p2.xlarge` and `ml.m4.xlarge`. 
 You can view your limit by looking at the EC2 Service Limit report which can be found here: https://console.aws.amazon.com/ec2/v2/home?#Limits.
-Your limit for each instace may be `0`. Therefore, you need to submit a request to increase the limit to `1`. 
+Your limit for each instace may be `0`. Therefore, you need to submit a request to increase the limit to `1`. Please refer to [Amazon EC2 Service Limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html) for limit management.
 
 ### Access the Notebook
 
