@@ -18,12 +18,14 @@ Click on the 'new' dropdown menu and select 'terminal'. By default, the working 
 
 ```bash
 cd SageMaker
-git clone https://github.com/udacity/sagemaker-deployment.git
+git clone https://github.com/jhonsonlee/sentiment-analysis-with-sagemaker.git
 exit
 ```
 
 After you have finished, close the terminal window.
 
-### Open and run the notebook of your choice
+### Set the AWS Instances
 
-Now that the repository has been cloned into the notebook instance you may navigate to any of the notebooks that you wish to complete or execute and work with them. Any additional instructions are contained in their respective notebooks.
+The project needs two computing instaces: ml.p4.xlarge and ml.m4.xlarge. 
+You can view your limit by looking at the EC2 Service Limit report which can be found here: https://console.aws.amazon.com/ec2/v2/home?#Limits.
+Your limit for each instace may be `0`. Therefore, you need to submit a request to increase the limit to `1`. 
