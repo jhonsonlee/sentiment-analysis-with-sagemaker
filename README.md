@@ -30,5 +30,9 @@ The project needs two computing instaces: `ml.p2.xlarge` and `ml.m4.xlarge`.
 You can view your limit by looking at the EC2 Service Limit report which can be found here: https://console.aws.amazon.com/ec2/v2/home?#Limits.
 Your limit for each instace may be `0`. Therefore, you need to submit a request to increase the limit to `1`. 
 
+### Access the Notebook
+
+Open the `SageMaker Project.ipynb` with Jupyter Notebook and enjoy scripting.
+
 ## Warning
 When you are not working on this project, make sure that the endpoint are `SHUT DOWN`. You are charged for the length of time that the endpoint is running so if you forget and leave it on you could end up with an unexpectedly large bill.
